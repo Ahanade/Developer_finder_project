@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevConnect - Project Matchmaker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"> DevConnect</div>
+        <div class="subtitle">Find your next side-project team</div>
+    </nav>
+
+    <div class="container">
+        
+        <aside class="sidebar">
+            <h2>Post a Project</h2>
+            <form id="projectForm">
+                <div class="form-group">
+                    <label for="title">Project Title</label>
+                    <input type="text" id="title" placeholder="e.g., AI Flashcard Generator" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="4" placeholder="What are you building?" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="skills">Skills Needed</label>
+                    <input type="text" id="skills" placeholder="e.g., Python, React, UI Design" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact">Contact Email</label>
+                    <input type="email" id="contact" placeholder="yourname@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="members">Team Members Needed</label>
+                  <input type="number" id="members" min="1" max="5" value="1" required>
+                </div>
+                
+                <button type="submit" class="btn">Share Project</button>
+            </form>
+        </aside>
+
+        <main class="feed-section">
+            <h2>Open Projects</h2>
+            <div id="projectFeed" class="feed-grid">
+                <div class="project-card">
+                    <h3>Example Project</h3>
+                    <p>This is a placeholder card. Once we connect the backend, real projects will load here!</p>
+                    <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+                    <a href="mailto:test@test.com" class="contact-link"e Contact Creator</a>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
